@@ -41,7 +41,7 @@ const menuData = [
 ];
 
 export default function HomeScreen() {
-  const renderMenuItem = ({ item }) => {
+  const renderMenuItem = ({ item }) => (
     <TouchableOpacity
       style={[styles.button, { backgroundColor: item.color }]}
       onPress={() => router.push(item.route)}
@@ -50,13 +50,9 @@ export default function HomeScreen() {
       <Text style={styles.buttonIcon}>{item.icon}</Text>
       <Text style={styles.buttonText}>{item.title}</Text>
     </TouchableOpacity>
-  }
+  )
   
   return (
-    <View>
-      <Text>index</Text>
-    </View>
-  )
-}
-
-const styles = StyleSheet.create({})
+   <SafeAreaView style={styles.container}>
+    
+   </SafeAreaView>
