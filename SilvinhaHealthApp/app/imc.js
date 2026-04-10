@@ -147,7 +147,7 @@ shadowOpacity: 0.3,
 shadowRadius: 5,
 elevation: 5,
 },
-buttonText: {
+buttonText: {.
 color: '#fff',
 fontSize: 18,
 fontWeight: '600'
