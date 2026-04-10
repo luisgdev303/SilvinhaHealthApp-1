@@ -20,6 +20,13 @@ export default function Layout() {
           }}
         />
       </Stack>
+      <Stack.Screen
+name="imc"
+options={{
+title: 'Calculadora de IMC',
+headerShown: true
+}}
+/>
     </>
   )
 }
