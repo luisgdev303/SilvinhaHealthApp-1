@@ -68,7 +68,7 @@ showsVerticalScrollIndicator={false}
 />
 </SafeAreaView>
 );
-}
+};
 
 const styles = StyleSheet.create({
 container: {
