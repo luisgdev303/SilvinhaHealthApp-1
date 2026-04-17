@@ -15,13 +15,13 @@ export const calcularIMC = (peso, altura) => {
     };
 };
 
-export const calcularPesoIdeal = (altura,sexo) => {
+export const calcularPesoIdeal = (altura, sexo) => {
     const alturaCm = altura * 100;
     let pesoIdeal = 0;
     if (sexo === 'masculino') {
-        pesoIdeal = 50 + 2.3 * ((alturaCm - 152.4)/2.54);
-    } else { 
-        pesoIdeal = 45.5 + 2.3 * ((alturaCm - 152.4)/2.54);
+        pesoIdeal = 50 + 2.3 * ((alturaCm - 152.4) / 2.54);
+    } else {
+        pesoIdeal = 45.5 + 2.3 * ((alturaCm - 152.4) / 2.54);
     }
 
     return pesoIdeal.toFixed(1);
@@ -33,7 +33,7 @@ export const calcularAgua = (peso) => {
     return {
         ml: Math.round(aguaMl),
         l: aguaL.toFixed(1)
-    }; 
+    };
 };
 
 export const calculatTMB = (peso, altura, idade, sexo) => {
@@ -43,7 +43,7 @@ export const calculatTMB = (peso, altura, idade, sexo) => {
     if (sexo === 'masculina') {
         tmb = (10 * peso) + (6.25 * alturaCm) - (5 * idade) + 5;
     } else {
-        tmb = (10 * peso) + (6.25 * alturaCm) - (5 * idade) - 161; 
+        tmb = (10 * peso) + (6.25 * alturaCm) - (5 * idade) - 161;
     }
     return Math.round(tmb);
 };
