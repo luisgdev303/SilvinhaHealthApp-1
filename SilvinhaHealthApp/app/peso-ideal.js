@@ -14,6 +14,7 @@ const [sexo, setSexo] = useState(null);
         Masculino
     </Text>
 </TouchableOpacity>
+
 import React, { useState } from 'react';
 import {
     View,
@@ -27,23 +28,28 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { calcularPesoIdeal } from '../utils/calculos';
 import BotaoVoltar from '../components/BotaoVoltar';
+
 export default function PesoIdealScreen() {
     const [altura, setAltura] = useState('');
     const [sexo, setSexo] = useState(null);
     const [resultado, setResultado] = useState('');
+
     const handleCalcular = () => {
         if (!altura || !sexo) {
             Alert.alert('Erro', 'Preencha a altura e selecione o sexo!');
             return;
         }
+
         const alturaNum = parseFloat(altura.replace(',', '.'));
         if (isNaN(alturaNum) || alturaNum <= 0) {
             Alert.alert('Erro', 'Digite uma altura válida.');
             return;
         }
+
         const pesoIdeal = calcularPesoIdeal(alturaNum, sexo);
         setResultado(pesoIdeal);
     };
+    
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView contentContainerStyle={styles.scrollContent}>

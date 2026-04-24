@@ -1,10 +1,10 @@
 import React from 'react';
 import {
-  FlatList,
-  StyleSheet,
+  View,
   Text,
   TouchableOpacity,
-  View
+  StyleSheet,
+  FlatList,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
@@ -35,7 +35,7 @@ const menuData = [
     id: '4',
     title: 'Taxa Metabólica',
     route: '/tmb',
-    color: '#96cEB4',
+    color: '#96CEB4',
     icon: '🔥'
   },
 ];
@@ -50,14 +50,14 @@ export default function HomeScreen() {
       <Text style={styles.buttonIcon}>{item.icon}</Text>
       <Text style={styles.buttonText}>{item.title}</Text>
     </TouchableOpacity>
-  )
+  );
 
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.title}>🌸 Silvinha Health App</Text>
         <Text style={styles.subtitle}>Cuide da sua saúde com
-          carinho</Text>
+    carinho</Text>
       </View>
       <FlatList
         data={menuData}
@@ -68,7 +68,7 @@ export default function HomeScreen() {
       />
     </SafeAreaView>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {

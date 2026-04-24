@@ -1,6 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 import { router } from 'expo-router';
+
 export default function BotaoVoltar() {
     return (
         <TouchableOpacity
@@ -8,8 +9,10 @@ export default function BotaoVoltar() {
             onPress={() => router.back()}
         >
             <Text style={styles.backButtonText}>← Voltar</Text>
-        </TouchableOpacity>);
+        </TouchableOpacity>
+  );
 }
+
 const styles = StyleSheet.create({
     backButton: {
         marginTop: 20,

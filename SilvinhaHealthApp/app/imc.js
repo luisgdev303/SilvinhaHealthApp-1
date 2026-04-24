@@ -6,11 +6,12 @@ const handleCalcular = () => {
       Alert.alert('Erro', 'Preencha todos os campos!');
       return;
    }
+
    const pesoNum = parseFloat(peso.replace(',', '.'));
    const alturaNum = parseFloat(altura.replace(',', '.'));
 
    if (isNaN(pesoNum) || isNaN(alturaNum) || pesoNum <= 0 || alturaNum
-      <= 0) {
+<= 0) {
       Alert.alert('Erro', 'Digite valores válidos (maiores que zero).');
       return;
    }
@@ -41,13 +42,14 @@ export default function ImcScreen() {
       const pesoNum = parseFloat(peso.replace(',', '.'));
       const alturaNum = parseFloat(altura.replace(',', '.'));
       if (isNaN(pesoNum) || isNaN(alturaNum) || pesoNum <= 0 || alturaNum
-         <= 0) {
+<= 0) {
          Alert.alert('Erro', 'Digite valores válidos (maiores que zero).');
          return;
       }
       const resultadoIMC = calcularIMC(pesoNum, alturaNum);
       setResultado(resultadoIMC);
    };
+
    return (
       <SafeAreaView style={styles.container}>
          <ScrollView contentContainerStyle={styles.scrollContent}>
@@ -59,7 +61,8 @@ export default function ImcScreen() {
                   está no peso ideal.
                </Text>
                <View style={styles.inputGroup}>
-                  <Text style={styles.label}>Peso (kg)</Text> <TextInput
+                  <Text style={styles.label}>Peso (kg)</Text>
+                   <TextInput
                      style={styles.input}
                      placeholder="Ex: 70"
                      value={peso}
@@ -80,7 +83,7 @@ export default function ImcScreen() {
                   />
                </View>
                <TouchableOpacity style={styles.button}
-                  onPress={handleCalcular}>
+onPress={handleCalcular}>
                   <Text style={styles.buttonText}>Calcular IMC</Text>
                </TouchableOpacity>
                {resultado && (
@@ -105,7 +108,8 @@ const styles = StyleSheet.create({
    },
    scrollContent: {
       flexGrow: 1,
-   }, content: {
+   }, 
+    content: {
       padding: 20
    },
    title: {
@@ -164,7 +168,8 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       borderWidth: 2,
       borderColor: '#FF6B6B',
-   }, resultTitle: {
+   }, 
+   resultTitle: {
       fontSize: 18,
       color: '#666',
       marginBottom: 10,
